@@ -1,3 +1,4 @@
+import { Personaje } from './../models/personaje.model';
 import { ServicioPersonajeService } from './../services/servicio-personaje.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoPersonajesComponent implements OnInit {
 
-  character;
+  character: Personaje[];
 
   constructor(private servicioPersonaje: ServicioPersonajeService) { }
 

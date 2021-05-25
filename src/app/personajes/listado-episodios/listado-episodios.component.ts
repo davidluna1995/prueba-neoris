@@ -1,3 +1,4 @@
+import { Episodio } from './../models/episodio.model';
 import { ServicioPersonajeService } from './../services/servicio-personaje.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +11,7 @@ export class ListadoEpisodiosComponent implements OnInit {
 
   constructor(private servicioPersonaje: ServicioPersonajeService) { }
 
-  episodes;
+  episodes: Episodio[];
 
   ngOnInit(): void {
     this.getEpisodes();
