@@ -1,0 +1,18 @@
+
+<div class="row justify-content-center">
+  <div *ngFor="let item of episodes; let i = index" class="col-12  col-lg-5 my-4">
+    <div class="card">
+
+      <div class="card-body">
+        <h5 class="card-title text-center"><b>Nombre episodio: </b>{{item.name}}</h5>
+        <p class="card-text"><b>Episodio:</b> {{item.episode}}</p>
+        <p><b>Link del capitulo: </b> <a [href]="item.url">Capitulo {{1 ++ i}}</a></p>
+      </div>
+
+      <div class="card-footer text-muted text-center">
+        <p><b>Fecha del aire:</b> {{item.air_date | date: 'dd-MM-yyyy'}}</p>
+       </div>
+
+    </div>
+  </div>
+</div>
